@@ -1,2 +1,3 @@
-# cen4802
-Repo for all CEN4802 assignments in the 2026 Fall Semester
+# cen4802 - Software Integration, Configuration, and Testing
+**Author:** Austin Alber  
+**Description:** A Spring Boot REST API built for version control workflow demonstration and continuous integration exercises.
