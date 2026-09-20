@@ -8,9 +8,10 @@ import java.time.LocalDateTime;
 @RestController
 public class HelloController {
 
+    // Updated response string in HelloController.java
     @GetMapping("/api/greet")
     public String greet(@RequestParam(defaultValue = "DevOps Student") String name) {
-        return "Hello, " + name + "! Welcome to CEN4802 Web Application v2.0. " +
-               "Server Time: " + LocalDateTime.now() + " | Status: Operational";
-    }
+        return "Hello, " + name + "! Welcome to CEN4802 Web Application v2.2 (CI Verified). " +
+            "Server Time: " + LocalDateTime.now() + " | Status: Operational";
+    }   
 }
