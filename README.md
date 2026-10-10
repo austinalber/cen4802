@@ -1,6 +1,6 @@
 # cen4802 - Software Integration, Configuration, and Testing
 **Author:** Austin Alber  
-**Description:** A Java Spring Boot REST API demonstrating automated build workflows, JUnit 5 unit testing, and automated Continuous Integration (CI) via GitHub Actions.
+**Description:** A Java Spring Boot REST API demonstrating automated build workflows, JUnit 5 unit testing, automated Continuous Integration (CI) via GitHub Actions, and application containerization with Docker.
 
 ---
 
@@ -17,11 +17,13 @@
 * **Unit Tests:** `src/test/java/com/cen4802/app/`
 * **Build Config:** `pom.xml`
 * **CI Config:** `.github/workflows/ci.yml`
+* **Container Config:** `Dockerfile`
 
 ---
 
 ## Local Build & Execution
 
+### 1. Native Java / Maven Execution
 ```bash
 # Run unit tests locally
 mvn test
