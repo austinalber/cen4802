@@ -50,5 +50,10 @@ class HelloControllerTest {
         assertTrue(status.containsKey("timestamp"), "Status payload should contain a timestamp key");
     }
 
-    
+@Test
+    public void testMidtermEndpoint() {
+        HelloController controller = new HelloController();
+        String response = controller.getMidtermStatus();
+        assertEquals("CEN 4802 Midterm Project - Successfully Integrated Pipeline", response);
+    }
 }
