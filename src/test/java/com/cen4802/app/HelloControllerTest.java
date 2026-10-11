@@ -54,6 +54,6 @@ class HelloControllerTest {
     public void testMidtermEndpoint() {
         HelloController controller = new HelloController();
         String response = controller.getMidtermStatus();
-        assertEquals("CEN 4802 Midterm Project - Successfully Integrated Pipeline", response);
+        assertEquals("Incorrect string", response);
     }
 }
