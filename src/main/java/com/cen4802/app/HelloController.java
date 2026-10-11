@@ -29,5 +29,8 @@ public class HelloController {
         return statusMap;
     }
 
-    
+    @GetMapping("/midterm")
+    public String getMidtermStatus() {
+        return "CEN 4802 Midterm Project - Successfully Integrated Pipeline";
+    }
 }
