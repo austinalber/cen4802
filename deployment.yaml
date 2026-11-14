@@ -21,3 +21,6 @@ spec:
         imagePullPolicy: Never
         ports:
         - containerPort: 8080
+        env:
+        - name: APP_LOG_LEVEL
+          value: "INFO"

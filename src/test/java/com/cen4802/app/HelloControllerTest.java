@@ -20,7 +20,7 @@ class HelloControllerTest {
     @Test
     @DisplayName("Test /api/greet with default parameter")
     void testGreetDefaultName() {
-        String result = controller.greet("DevOps Student");
+        String result = controller.greet(null);
         
         assertNotNull(result, "Response should not be null");
         assertTrue(result.contains("Hello, DevOps Student!"), "Response should include default name greeting");
@@ -38,6 +38,15 @@ class HelloControllerTest {
     }
 
     @Test
+    @DisplayName("Reject a blank greeting name")
+    void testGreetRejectsBlankName() {
+        IllegalArgumentException exception = assertThrows(
+                IllegalArgumentException.class, () -> controller.greet("  "));
+
+        assertEquals("Name must not be blank", exception.getMessage());
+    }
+
+    @Test
     @DisplayName("Test /api/status payload structure and values")
     void testGetStatusMap() {
         Map<String, Object> status = controller.getStatus();
@@ -50,9 +59,8 @@ class HelloControllerTest {
         assertTrue(status.containsKey("timestamp"), "Status payload should contain a timestamp key");
     }
 
-@Test
+    @Test
     public void testMidtermEndpoint() {
-        HelloController controller = new HelloController();
         String response = controller.getMidtermStatus();
         assertEquals("CEN 4802 Midterm Project - Successfully Integrated Pipeline", response);
     }

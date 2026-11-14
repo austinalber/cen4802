@@ -1,0 +1,8 @@
+.git
+.github
+.mvn
+evidence
+logs
+terraform
+target/*
+!target/app-0.0.1-SNAPSHOT.jar
